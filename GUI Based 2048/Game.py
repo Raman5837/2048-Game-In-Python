@@ -39,7 +39,7 @@ class Game(Tkinter.Frame):
         
         ''' Now, Displaying The Score On The Top '''
         scoreFrame = Tkinter.Frame(self)
-        scoreFrame.place(relx = 0.5, y = 40, anchor = 'center')
+        scoreFrame.place(relx = 0.5, y = 51, anchor = 'center')
         Tkinter.Label(scoreFrame, text = 'Score', font = Assets.SCORE_LABEL_FONT).grid(row = 0)
         self.scoreLabel = Tkinter.Label(scoreFrame, text = '0', font = Assets.SCORE_FONT)
         self.scoreLabel.grid(row = 1)
@@ -154,7 +154,6 @@ class Game(Tkinter.Frame):
         self.CallAddUpdateOver()
 
 
-    # TODO Rename this here and in `LeftArrow`, `RightArrow`, `UpArrow` and `DownArrow`
     def CallAddUpdateOver(self):
         self.AddNewBlock()
         self.UpdateGUI()
@@ -197,7 +196,7 @@ class Game(Tkinter.Frame):
             gameOverFrame.place(relx = 0.5, rely = 0.5, anchor = 'center')
             Tkinter.Label(gameOverFrame, text = 'Game Over', background = Assets.LOSER_BG, foreground = Assets.GAME_OVER_FONT_COLOR, font = Assets.GAME_OVER_FONT).pack()
         
-            
+# Main Function To Call The Game Class            
 def Play():
     Game()
     
